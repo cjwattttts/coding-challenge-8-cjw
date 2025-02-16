@@ -28,7 +28,7 @@ console.log(calculateServiceFee(500, "Standard")); // Expected output: "Service 
 
 // TASK 4
 function calculateRentalCost(days, carType, insurance = false) {
-    const = {"Economy": 40, "Standard": 60, "Luxury": 100 };
+    const rates = {"Economy": 40, "Standard": 60, "Luxury": 100 };
     let totalCost = days * rates[carType] + (insurance ? days * 20 : 0);
     return `Total Rental Cost: $${totalCost}`;
 }
