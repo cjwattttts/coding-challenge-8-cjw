@@ -19,7 +19,7 @@ console.log(calculateDiscount(250, 0.15)); // Expected output: "Final Price: $21
 // TASK 3 
 const calculateServiceFee = (amount, serviceType) => {
     let rate = serviceType === "Premium" ? 0.15 : serviceType === "Standard" ? 0.1 : 0.05; // sets service fee based on type of service
-    let fee = amount * rate; // calculates service fee
+    let fee = amount * rate; // calculates total service fee
     return `Service Fee: $${fee.toFixed(2)}`;
 };
 
@@ -58,7 +58,7 @@ function createCartTracker() {
     let total = 0; // sets initial cart total
     return function (amount) {
         total += amount; // adds amount to total
-        return `Value of Total Cart: $${total}`;
+        return `Total Value of Cart: $${total}`;
     };
 }
 
