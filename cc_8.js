@@ -66,4 +66,11 @@ let cart = createCartTracker();
 console.log(cart(20)); // Expected output: "Total Cart Value: $20"
 console.log(cart(35)); // Expected output: "Total Cart Value: $55"
 
+// TASK 8
+function calculateSavings(years, amount) {
+    if (years >= 10) return `Savings Amount Projected: $${amount.toFixed(2)}`; // base: returns savings amount projected after 10 years
+    return calculateSavings(years + 1, amount * 1.05); // recursive: applies 5 percent interest
+}
 
+console.log(calculateSavings(8, 1000)); // Expected output: "Projected Savings: $1102.50"
+console.log(calculateSavings(5, 5000)); // Expected output: "Projected Savings: $6381.41"
